@@ -18,6 +18,34 @@ Apache 2
 
 We use eslint and extend semistandard.
 
+### Git hooks
+
+npm >= 7
+
+```
+npm install husky -D
+npm set-script prepare "husky install" && npm run prepare
+npx husky add .husky/pre-commit "npm test"
+```
+
+npm < 7
+
+```
+npm install husky -D
+```
+
+Add to package.json
+```
+ "scripts": {
+    "prepare": "husky install",
+```
+
+Run the commands
+```
+npm run prepare
+npx husky add .husky/pre-commit "npm test"
+```
+
 ### Testing
 
 Testing framework is dependant on the project. The Reference Architecture recommendations are for Mocha or Jest. The nodeshift team has been using Tape in the past.
