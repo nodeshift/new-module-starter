@@ -10,6 +10,52 @@ We have been trying to adhere to conventional commits, https://www.conventionalc
 
 We also try to stay away from merge commits to keep the git history clean.
 
+npm >= 7
+
+```
+npm install standard-version -D
+npm set-script release "standard-version"
+```
+
+npm < 7
+
+```
+npm install standard-version -D
+```
+
+Add to package.json
+```
+ "scripts": {
+    "release": "standard-version",
+```
+
+We can run this with `--dry-run` option to see the results, for example:
+
+```
+$ npm run release -- --dry-run
+
+> npcheck@0.1.13 release /home/lm/code/npcheck
+> standard-version "--dry-run"
+
+✔ bumping version in package.json from 0.1.13 to 0.1.14
+✔ bumping version in package-lock.json from 0.1.13 to 0.1.14
+✔ created CHANGELOG.md
+✔ outputting changes to CHANGELOG.md
+
+---
+### 0.1.14 (2021-07-06)
+
+
+### Features
+
+* adding initial test structure ([#4](https://github.com/nodeshift/npcheck/issues/4)) ([e6281df](https://github.com/nodeshift/npcheck/commit/e6281df6e803ced9c6d57460821af7d8a431480e))
+---
+
+✔ committing package-lock.json and package.json and CHANGELOG.md
+✔ tagging release v0.1.14
+ℹ Run `git push --follow-tags origin standard-version && npm publish` to publish
+```
+
 ### License
 
 Apache 2
