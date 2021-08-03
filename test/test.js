@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
+const main = require('../main.js');
 const assert = require('assert');
 
-describe('Dummy', () => {
-  it('test', () => {
-    assert.strictEqual(1, 1);
+describe('It should', () => {
+  it('bar', () => {
+    assert.strictEqual(main.foo(), 'bar');
   });
 });

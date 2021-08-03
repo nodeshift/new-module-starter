@@ -1,4 +1,6 @@
 # New Module Starter
+![Node.js CI](https://github.com/nodeshift/new-module-starter/workflows/Node.js%20CI/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/nodeshift/new-module-starter/badge.svg?branch=main)](https://coveralls.io/github/nodeshift/new-module-starter?branch=main)
 
 This repo is for reference when creating a new node module/application in the nodeshift org.
 
