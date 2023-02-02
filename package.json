@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A summary of what to add when creating a new node module",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "prepare": "husky install",
     "test": "nyc mocha"
